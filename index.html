@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eczema-Friendly Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Eczema-Friendly Recipe Finder</h1>
+        
+        <!-- Search Bar -->
+        <input type="text" id="search" placeholder="Search recipes (e.g., smoothie, snack)" oninput="filterRecipes()">
+        
+        <!-- Favorites Button Container -->
+        <div id="favorites-container">
+            <button onclick="displayFavorites()" id="favorites-button">My Favorites</button>
+        </div>
+    </header>
+    
+    
+
+    <main>
+        <section id="filters-section">
+            <h2 onclick="toggleFilters()" class="filters-header">Filters</h2>
+            <div id="filters" class="filters-content">
+                <!-- Compound Level Filters -->
+                <label><input type="checkbox" id="lowSalicylates" onclick="filterRecipes()"> Low Salicylates</label>
+                <label><input type="checkbox" id="lowAmines" onclick="filterRecipes()"> Low Amines</label>
+                <label><input type="checkbox" id="lowMSG" onclick="filterRecipes()"> Low MSG</label>
+                <label><input type="checkbox" id="lowSulphites" onclick="filterRecipes()"> Low Sulphites</label>
+                <label><input type="checkbox" id="lowNitrates" onclick="filterRecipes()"> Low Nitrates</label>
+        
+                <!-- Category Filter -->
+                <label for="categorySelect">Category:</label>
+                <select id="categorySelect" onchange="filterRecipes()">
+                    <option value="">All</option>
+                    <option value="breakfast">Breakfast</option>
+                    <option value="snack">Snack</option>
+                    <option value="lunch">Lunch/Dinner</option>
+                    <option value="drink">Drinks</option>
+                    <!-- Ingredient Categories -->
+                    <option value="fruit">Fruits</option>
+                    <option value="vegetable">Vegetables</option>
+                    <option value="meat">Meat</option>
+                    <option value="seafood">Seafood</option>
+                    <option value="grain">Grain</option>
+                    <option value="seasoning">Seasoning</option>
+                    <option value="nut">Nut</option>
+                    <option value="legume">Legume</option>
+                    <option value="dried fruit">Dried Fruit</option>
+                    <option value="cooking oil">Cooking Oil</option>
+                </select>
+        
+                <!-- Include and Exclude Ingredients Filters -->
+                <label for="includeIngredientsSelect">Include Ingredients:</label>
+                <select id="includeIngredientsSelect" multiple onchange="filterRecipes()"></select>
+        
+                <label for="excludeIngredientsSelect">Exclude Ingredients:</label>
+                <select id="excludeIngredientsSelect" multiple onchange="filterRecipes()"></select>
+            </div>
+        </section>
+        
+        
+        
+
+        <section id="recipes">
+            <h2>Recipes</h2>
+            <div id="recipeContainer"></div>
+        </section>
+    </main>
+    <!-- Modal for Ingredient Details -->
+    <div id="ingredientModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 id="ingredientTitle"></h3>
+            <p><strong>Salicylates:</strong> <span id="salicylatesLevel"></span></p>
+            <p><strong>Amines:</strong> <span id="aminesLevel"></span></p>
+            <p><strong>MSG:</strong> <span id="msgLevel"></span></p>
+            <p><strong>Sulphites:</strong> <span id="sulphitesLevel"></span></p>
+            <p><strong>Nitrates:</strong> <span id="nitratesLevel"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
