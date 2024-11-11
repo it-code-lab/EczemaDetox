@@ -138,10 +138,9 @@ main {
 }
 
 .recipe-card h3 {
-    background: #4CAF50;
+    background: #607D8B;
     color: white;
     padding: 10px;
-    font-size: 1.2em;
 }
 
 .recipe-card ul {
@@ -167,6 +166,12 @@ main {
 .yellow { background-color: #ffeb3b; color: #333; }
 .red { background-color: #e57373; }
 .grey{background-color: gray;}
+
+.levelColorlow { background-color: #81c784; margin: 2px;}
+.levelColormoderate{
+    background-color: #ffeb3b; color: #333 ; margin: 2px; 
+}
+.levelColorhigh { background-color: #e57373; margin: 2px;}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {

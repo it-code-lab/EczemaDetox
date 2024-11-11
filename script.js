@@ -5214,6 +5214,102 @@ function filterRecipes() {
     const lowAmines = document.getElementById("lowAmines").checked;
     const selectedCategory = document.getElementById("categorySelect").value;
 
+    console.count("ingredientCategories = " + JSON.stringify(ingredientCategories));
+
+    // Check if the selected category is an ingredient category or recipe category
+    const isRecipeCategory = ["breakfast", "snack", "lunch", "drink"].includes(selectedCategory);
+    const isIngredientCategory = Object.keys(ingredientCategories).includes(selectedCategory);
+
+    if (isIngredientCategory) {
+        // Display ingredient cards based on the selected ingredient category
+        const ingredientsToDisplay = Object.entries(ingredientLevels).filter(
+            ([ingredientName, details]) => details.category === selectedCategory
+        ).map(([ingredientName, details]) => ({ name: ingredientName, ...details }));
+
+        displayIngredientCards(ingredientsToDisplay);
+        return; // Exit the function as we're displaying ingredients, not recipes
+    }
+
+    // If displaying recipes, proceed with recipe filtering logic
+    const includeIngredients = Array.from(document.getElementById("includeIngredientsSelect").selectedOptions)
+        .map(option => option.value);
+    const excludeIngredients = Array.from(document.getElementById("excludeIngredientsSelect").selectedOptions)
+        .map(option => option.value);
+
+    const filteredRecipes = recipes.filter(recipe => {
+        const searchMatches = recipe.name.toLowerCase().includes(searchQuery) || 
+                              recipe.category.toLowerCase().includes(searchQuery);
+
+        const categoryMatches = isRecipeCategory ? 
+            (!selectedCategory || recipe.category === selectedCategory) :
+            true;
+
+        const compoundMatches = recipe.ingredients.every(ingredientName => {
+            const levels = ingredientLevelsLowerCase[ingredientName.toLowerCase()] || {};
+            return (
+                (!lowSalicylates || levels.salicylates === "low") &&
+                (!lowAmines || levels.amines === "low")
+            );
+        });
+
+        const includesIngredients = includeIngredients.every(includeIngredient =>
+            recipe.ingredients.some(ingredientName => ingredientName.toLowerCase() === includeIngredient)
+        );
+
+        const excludesIngredients = excludeIngredients.every(excludeIngredient =>
+            !recipe.ingredients.some(ingredientName => ingredientName.toLowerCase() === excludeIngredient)
+        );
+
+        return searchMatches && categoryMatches && compoundMatches && includesIngredients && excludesIngredients;
+    });
+
+    displayRecipes(filteredRecipes);
+}
+
+function displayIngredientCards(ingredients) {
+    const recipeContainer = document.getElementById("recipeContainer");
+    recipeContainer.innerHTML = ""; // Clear the container
+
+    ingredients.forEach(ingredient => {
+        const ingredientCard = document.createElement("div");
+        ingredientCard.className = "recipe-card";
+
+        const title = document.createElement("h3");
+        title.innerText = ingredient.name;
+        ingredientCard.appendChild(title);
+
+        const category = document.createElement("p");
+        category.className = `recipe-category ${ingredient.category.toLowerCase()}`;
+        category.innerText = `Category: ${capitalizeFirstLetter(ingredient.category)}`;
+        ingredientCard.appendChild(category);
+
+        const detailsList = document.createElement("ul");
+        
+        // Add each compound level as a list item
+        ["salicylates", "amines", "msg", "sulphites", "nitrates"].forEach(compound => {
+            const item = document.createElement("li");
+            item.innerText = `${capitalizeFirstLetter(compound)}: ${ingredient[compound] || "N/A"}`;
+            item.className = `levelColor${ingredient[compound]}`; // Add color class based on levels
+            detailsList.appendChild(item);
+        });
+
+        ingredientCard.appendChild(detailsList);
+        recipeContainer.appendChild(ingredientCard);
+    });
+}
+
+// // Helper function to capitalize the first letter of a string
+// function capitalizeFirstLetter(string) {
+//     return string.charAt(0).toUpperCase() + string.slice(1);
+// }
+
+
+function filterRecipes_Delit() {
+    const searchQuery = document.getElementById("search").value.toLowerCase();
+    const lowSalicylates = document.getElementById("lowSalicylates").checked;
+    const lowAmines = document.getElementById("lowAmines").checked;
+    const selectedCategory = document.getElementById("categorySelect").value;
+
     // Retrieve selected ingredients from include and exclude multi-selects
     const includeIngredients = Array.from(document.getElementById("includeIngredientsSelect").selectedOptions)
         .map(option => option.value);
