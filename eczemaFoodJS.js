@@ -3808,26 +3808,57 @@ const ingredientLevels = {
         "sulphites": "high",
         "nitrates": "none"
     },
-    "Milk": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Goat Milk": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Soy Milk": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Almond Milk": { "category": "dairy", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Oat Milk": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Coconut Milk": { "category": "dairy", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Cheese (Hard)": { "category": "dairy", "salicylates": "None", "amines": "high", "msg": "high", "sulphites": "None", "nitrates": "None" },
-    "Cheese (Soft)": { "category": "dairy", "salicylates": "None", "amines": "high", "msg": "high", "sulphites": "None", "nitrates": "None" },
-    "Yogurt": { "category": "dairy", "salicylates": "None", "amines": "moderate", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Butter": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Cream": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Egg (Whole)": { "category": "dairy", "salicylates": "None", "amines": "moderate", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Egg White": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" },
-    "Egg Yolk": { "category": "dairy", "salicylates": "None", "amines": "moderate", "msg": "moderate", "sulphites": "None", "nitrates": "None" },
-    "Powdered Milk": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "high", "sulphites": "None", "nitrates": "None" },
-    "Powdered Egg": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "high", "sulphites": "low", "nitrates": "None" },
-    "Evaporated Milk": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "moderate", "sulphites": "low", "nitrates": "None" },
-    "Condensed Milk": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "moderate", "sulphites": "low", "nitrates": "None" },
-    "Ice Cream": { "category": "dairy", "salicylates": "None", "amines": "moderate", "msg": "moderate", "sulphites": "low", "nitrates": "None" },
-    "Cream Cheese": { "category": "dairy", "salicylates": "None", "amines": "low", "msg": "low", "sulphites": "None", "nitrates": "None" }
+    "Milk": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Goat Milk": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Soy Milk": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Almond Milk": { "category": "dairy", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Oat Milk": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Coconut Milk": { "category": "dairy", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Cheese (Hard)": { "category": "dairy", "salicylates": "none", "amines": "high", "msg": "high", "sulphites": "none", "nitrates": "none" },
+    "Cheese (Soft)": { "category": "dairy", "salicylates": "none", "amines": "high", "msg": "high", "sulphites": "none", "nitrates": "none" },
+    "Yogurt": { "category": "dairy", "salicylates": "none", "amines": "moderate", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Butter": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Cream": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Egg (Whole)": { "category": "dairy", "salicylates": "none", "amines": "moderate", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Egg White": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Egg Yolk": { "category": "dairy", "salicylates": "none", "amines": "moderate", "msg": "moderate", "sulphites": "none", "nitrates": "none" },
+    "Powdered Milk": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "high", "sulphites": "none", "nitrates": "none" },
+    "Powdered Egg": { "category": "dairy", "salicylates": "low", "amines": "moderate", "msg": "high", "sulphites": "low", "nitrates": "none" },
+    "Evaporated Milk": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "moderate", "sulphites": "low", "nitrates": "none" },
+    "Condensed Milk": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "moderate", "sulphites": "low", "nitrates": "none" },
+    "Ice Cream": { "category": "dairy", "salicylates": "none", "amines": "moderate", "msg": "moderate", "sulphites": "low", "nitrates": "none" },
+    "Cream Cheese": { "category": "dairy", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+
+
+    "Rice Milk": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Coconut Yogurt": { "category": "miscellaneous", "salicylates": "low", "amines": "moderate", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Vanilla Extract": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "low", "nitrates": "none" },
+    "Honey": { "category": "miscellaneous", "salicylates": "low", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Rice Bread": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Water": { "category": "miscellaneous", "salicylates": "none", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Fresh Ginger": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Rice Tortilla": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Ice Cubes": { "category": "miscellaneous", "salicylates": "none", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Olive Oil": { "category": "miscellaneous", "salicylates": "none", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Lemon Juice": { "category": "miscellaneous", "salicylates": "moderate", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Rice Cakes": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Mint": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Fresh Mint": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Dill": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+
+    "Cooked White Rice": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Coconut Flakes": { "category": "miscellaneous", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Rice Crackers": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Coconut Water": { "category": "miscellaneous", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Lime Juice": { "category": "miscellaneous", "salicylates": "moderate", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" },
+    "Rice Vinegar": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Apple Vinegar": { "category": "miscellaneous", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Lentils": { "category": "miscellaneous", "salicylates": "none", "amines": "moderate", "msg": "low", "sulphites": "none", "nitrates": "low" },
+    "Carrots": { "category": "miscellaneous", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Shredded Carrot": { "category": "miscellaneous", "salicylates": "low", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Parsley": { "category": "miscellaneous", "salicylates": "moderate", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Rice Noodles": { "category": "miscellaneous", "salicylates": "none", "amines": "low", "msg": "low", "sulphites": "none", "nitrates": "none" },
+    "Aloe Vera Gel": { "category": "miscellaneous", "salicylates": "none", "amines": "none", "msg": "none", "sulphites": "none", "nitrates": "none" }
 
 
 
@@ -5263,24 +5294,32 @@ function searchByIngredient() {
 
 // Filter recipes based on compound levels, selected category (recipe or ingredient), search query, and include/exclude ingredients
 function filterRecipes() {
-    //const searchQuery = document.getElementById("search").value.toLowerCase();
     const lowSalicylates = document.getElementById("lowSalicylates").checked;
     const lowAmines = document.getElementById("lowAmines").checked;
+    const lowMSG = document.getElementById("lowMSG").checked;
+    const lowSulphites = document.getElementById("lowSulphites").checked;
+    const lowNitrates = document.getElementById("lowNitrates").checked;
 
     // Get selected category from radio buttons
     const selectedCategory = document.querySelector('input[name="category"]:checked').value;
-
-
-    //console.count("ingredientCategories = " + JSON.stringify(ingredientCategories));
 
     // Check if the selected category is an ingredient category or recipe category
     const isRecipeCategory = ["breakfast", "snack", "lunch", "drink"].includes(selectedCategory);
     const isIngredientCategory = Object.keys(ingredientCategories).includes(selectedCategory);
 
     if (isIngredientCategory) {
-        // Display ingredient cards based on the selected ingredient category
+        // Display ingredient cards based on the selected ingredient category and compound filters
         const ingredientsToDisplay = Object.entries(ingredientLevels).filter(
-            ([ingredientName, details]) => details.category === selectedCategory
+            ([ingredientName, details]) => {
+                return (
+                    details.category === selectedCategory &&
+                    (!lowSalicylates || details.salicylates === "low" || details.salicylates === "none") &&
+                    (!lowAmines || details.amines === "low" || details.amines === "none") &&
+                    (!lowMSG || details.msg === "low" || details.msg === "none") &&
+                    (!lowSulphites || details.sulphites === "low" || details.sulphites === "none") &&
+                    (!lowNitrates || details.nitrates === "low" || details.nitrates === "none")
+                );
+            }
         ).map(([ingredientName, details]) => ({ name: ingredientName, ...details }));
 
         displayIngredientCards(ingredientsToDisplay);
@@ -5294,7 +5333,6 @@ function filterRecipes() {
         .map(option => option.value);
 
     const filteredRecipes = recipes.filter(recipe => {
-
         const categoryMatches = isRecipeCategory ? 
             (!selectedCategory || recipe.category === selectedCategory) :
             true;
@@ -5302,8 +5340,11 @@ function filterRecipes() {
         const compoundMatches = recipe.ingredients.every(ingredientName => {
             const levels = ingredientLevelsLowerCase[ingredientName.toLowerCase()] || {};
             return (
-                (!lowSalicylates || levels.salicylates === "low") &&
-                (!lowAmines || levels.amines === "low")
+                (!lowSalicylates || levels.salicylates === "low" || levels.salicylates === "none") &&
+                (!lowAmines || levels.amines === "low" || levels.amines === "none") &&
+                (!lowMSG || levels.msg === "low" || levels.msg === "none") &&
+                (!lowSulphites || levels.sulphites === "low" || levels.sulphites === "none") &&
+                (!lowNitrates || levels.nitrates === "low" || levels.nitrates === "none")
             );
         });
 
@@ -5320,6 +5361,7 @@ function filterRecipes() {
 
     displayRecipes(filteredRecipes);
 }
+
 
 function displayIngredientCards(ingredients) {
     const recipeContainer = document.getElementById("recipeContainer");
@@ -5431,11 +5473,12 @@ function getIngredientLevels(ingredientName) {
         return exactMatch;
     }
 
+    //SM-Do not delete - Disabling for now (Nov-11-2024)
     // If no exact match, try to find a partial match
-    const partialMatchKey = Object.keys(ingredientLevelsLowerCase).find(key => ingredientName.toLowerCase().includes(key));
-    if (partialMatchKey) {
-        return ingredientLevelsLowerCase[partialMatchKey];
-    }
+    // const partialMatchKey = Object.keys(ingredientLevelsLowerCase).find(key => ingredientName.toLowerCase().includes(key));
+    // if (partialMatchKey) {
+    //     return ingredientLevelsLowerCase[partialMatchKey];
+    // }
 
     // If no match found, return an empty object
     return {};

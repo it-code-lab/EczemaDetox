@@ -1,93 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eczema-Friendly Food Planner</title>
-    <link rel="stylesheet" href="eczemaFoodCSS.css">
-</head>
-<body>
-    <header>
-        <h1>Eczema-Friendly Food Planner</h1>
-        
+    <link rel="stylesheet" href="eczemaFoodCSS.css" />
+  </head>
+  <body>
+    <div class="eczemaFoodDiv">
+      <header>
+        <h1 class="eczemaHdr">Eczema-Relieving Food Planner</h1>
+
         <!-- Search Bar -->
-        <input type="text" id="search" placeholder="Search Ingredients" oninput="searchByIngredient()">
-        
+        <input
+          type="text"
+          id="search"
+          placeholder="Search Ingredients"
+          oninput="searchByIngredient()"
+        />
+
         <!-- Favorites Button Container -->
         <div id="favorites-container">
-            <button onclick="displayFavorites()" id="favorites-button">My Favorites</button>
+          <button onclick="displayFavorites()" id="favorites-button">
+            My Favorites
+          </button>
         </div>
-    </header>
-    
-    
+      </header>
 
-    <main>
-
+      <main>
         <label>Select Food Category:</label>
         <div id="categoryOptions">
-            <!-- Recipe Categories -->
-            <!-- <label><input type="radio" name="category" value="" onclick="filterRecipes()" checked> All</label> -->
-            <label><input type="radio" name="category" value="breakfast" onclick="filterRecipes()" checked> Breakfast</label>
-            <label><input type="radio" name="category" value="snack" onclick="filterRecipes()"> Snack</label>
-            <label><input type="radio" name="category" value="lunch" onclick="filterRecipes()"> Lunch</label>
-            <label><input type="radio" name="category" value="drink" onclick="filterRecipes()"> Drinks</label>
-            <label><input type="radio" name="category" value="fruit" onclick="filterRecipes()"> Fruits</label>
-            <label><input type="radio" name="category" value="vegetable" onclick="filterRecipes()"> Vegetables</label>
-            <label><input type="radio" name="category" value="meat" onclick="filterRecipes()"> Meat</label>
-            <label><input type="radio" name="category" value="seafood" onclick="filterRecipes()"> Seafood</label>
-            <label><input type="radio" name="category" value="grain" onclick="filterRecipes()"> Grain</label>
-            <label><input type="radio" name="category" value="seasoning" onclick="filterRecipes()"> Seasoning</label>
-            <label><input type="radio" name="category" value="nut" onclick="filterRecipes()"> Nut</label>
-            <label><input type="radio" name="category" value="legume" onclick="filterRecipes()"> Legume</label>
-            <label><input type="radio" name="category" value="dried fruit" onclick="filterRecipes()"> Dried fruit</label>
-            <label><input type="radio" name="category" value="cooking oil" onclick="filterRecipes()"> Cooking oil</label>
+          <!-- Recipe Categories -->
+          <!-- <label><input type="radio" name="category" value="" onclick="filterRecipes()" checked> All</label> -->
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="breakfast"
+              onclick="filterRecipes()"
+              checked=""
+            />
+            Breakfast</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="snack"
+              onclick="filterRecipes()"
+            />
+            Snack</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="lunch"
+              onclick="filterRecipes()"
+            />
+            Lunch</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="drink"
+              onclick="filterRecipes()"
+            />
+            Drinks</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="fruit"
+              onclick="filterRecipes()"
+            />
+            Fruits</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="vegetable"
+              onclick="filterRecipes()"
+            />
+            Vegetables</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="meat"
+              onclick="filterRecipes()"
+            />
+            Meat</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="seafood"
+              onclick="filterRecipes()"
+            />
+            Seafood</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="grain"
+              onclick="filterRecipes()"
+            />
+            Grain</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="seasoning"
+              onclick="filterRecipes()"
+            />
+            Seasoning</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="nut"
+              onclick="filterRecipes()"
+            />
+            Nut</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="dairy"
+              onclick="filterRecipes()"
+            />
+            Dairy</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="legume"
+              onclick="filterRecipes()"
+            />
+            Legume</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="dried fruit"
+              onclick="filterRecipes()"
+            />
+            Dried fruit</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="category"
+              value="cooking oil"
+              onclick="filterRecipes()"
+            />
+            Cooking oil</label
+          >
         </div>
 
         <label>Click to add filters for chemicals and ingredients:</label>
         <section id="filters-section">
-            <h2 onclick="toggleFilters()" class="filters-header">
-            <span id="filter-icon" class="filter-icon">&#11208;</span>
-            Filters</h2>
-            <div id="filters" class="filters-content">
-                <!-- Compound Level Filters -->
-                <div class="levelsDiv">
-                <label><input type="checkbox" id="lowSalicylates" onclick="filterRecipes()"> Low Salicylates</label>
-                <label><input type="checkbox" id="lowAmines" onclick="filterRecipes()"> Low Amines</label>
-                <label><input type="checkbox" id="lowMSG" onclick="filterRecipes()"> Low MSG</label>
-                <label><input type="checkbox" id="lowSulphites" onclick="filterRecipes()"> Low Sulphites</label>
-                <label><input type="checkbox" id="lowNitrates" onclick="filterRecipes()"> Low Nitrates</label>
-                </div>
-       
-                <!-- Include and Exclude Ingredients Filters -->
-                <label for="includeIngredientsSelect">Include Ingredients:</label>
-                <select id="includeIngredientsSelect" multiple onchange="filterRecipes()"></select>
-        
-                <label for="excludeIngredientsSelect">Exclude Ingredients:</label>
-                <select id="excludeIngredientsSelect" multiple onchange="filterRecipes()"></select>
+          <h2 onclick="toggleFilters()" class="filters-header">
+            <span id="filter-icon" class="filter-icon">⯈</span>
+            Filters
+          </h2>
+
+          <div id="filters" class="filters-content">
+            <!-- Compound Level Filters -->
+            <div class="levelsDiv">
+              <label
+                ><input
+                  type="checkbox"
+                  id="lowSalicylates"
+                  onclick="filterRecipes()"
+                />
+                Low Salicylates</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  id="lowAmines"
+                  onclick="filterRecipes()"
+                />
+                Low Amines</label
+              >
+              <label
+                ><input type="checkbox" id="lowMSG" onclick="filterRecipes()" />
+                Low MSG</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  id="lowSulphites"
+                  onclick="filterRecipes()"
+                />
+                Low Sulphites</label
+              >
+              <label
+                ><input
+                  type="checkbox"
+                  id="lowNitrates"
+                  onclick="filterRecipes()"
+                />
+                Low Nitrates</label
+              >
             </div>
+
+            <!-- Include and Exclude Ingredients Filters -->
+            <label for="includeIngredientsSelect">Include Ingredients:</label>
+            <select
+              id="includeIngredientsSelect"
+              multiple=""
+              onchange="filterRecipes()"
+            ></select>
+
+            <label for="excludeIngredientsSelect">Exclude Ingredients:</label>
+            <select
+              id="excludeIngredientsSelect"
+              multiple=""
+              onchange="filterRecipes()"
+            ></select>
+          </div>
         </section>
-        
-        
-        
 
         <section id="recipes">
-            <!-- <h2>Recipes</h2> -->
-            <div id="recipeContainer"></div>
+          <!-- 
+       
+       <h2>Recipes</h2>
+       
+        -->
+          <div id="recipeContainer"></div>
         </section>
-    </main>
-    <!-- Modal for Ingredient Details -->
-    <div id="ingredientModal" class="modal">
+      </main>
+      <!-- Modal for Ingredient Details -->
+      <div id="ingredientModal" class="modal">
         <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h3 id="ingredientTitle"></h3>
-            <p><strong>Salicylates:</strong> <span id="salicylatesLevel"></span></p>
-            <p><strong>Amines:</strong> <span id="aminesLevel"></span></p>
-            <p><strong>MSG:</strong> <span id="msgLevel"></span></p>
-            <p><strong>Sulphites:</strong> <span id="sulphitesLevel"></span></p>
-            <p><strong>Nitrates:</strong> <span id="nitratesLevel"></span></p>
+          <span class="close-button" onclick="closeModal()">×</span>
+          <h3 id="ingredientTitle"></h3>
+
+          <p>
+            <strong>Salicylates:</strong> <span id="salicylatesLevel"></span>
+          </p>
+
+          <p><strong>Amines:</strong> <span id="aminesLevel"></span></p>
+
+          <p><strong>MSG:</strong> <span id="msgLevel"></span></p>
+
+          <p><strong>Sulphites:</strong> <span id="sulphitesLevel"></span></p>
+
+          <p><strong>Nitrates:</strong> <span id="nitratesLevel"></span></p>
         </div>
+      </div>
     </div>
 
     <script src="eczemaFoodJS.js"></script>
-</body>
+  </body>
 </html>
