@@ -5308,6 +5308,7 @@ function filterRecipes() {
     const isIngredientCategory = Object.keys(ingredientCategories).includes(selectedCategory);
 
     if (isIngredientCategory) {
+        document.getElementById("ingredientsFilters").style.display = "none";
         // Display ingredient cards based on the selected ingredient category and compound filters
         const ingredientsToDisplay = Object.entries(ingredientLevels).filter(
             ([ingredientName, details]) => {
@@ -5324,6 +5325,8 @@ function filterRecipes() {
 
         displayIngredientCards(ingredientsToDisplay);
         return; // Exit the function as we're displaying ingredients, not recipes
+    } else{
+        document.getElementById("ingredientsFilters").style.display = "block";
     }
 
     // If displaying recipes, proceed with recipe filtering logic
